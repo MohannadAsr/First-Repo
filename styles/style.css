@@ -1,0 +1,371 @@
+:root {
+    --dark : #19283f;
+    /* --green : #33d175; */
+    --green-alpha: #33d175ad;
+    --green : #f77f00;
+}
+
+.btn:hover {
+    background-color: var(--green) !important;
+    border: none;
+    transition: 0.3s;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 20px;
+}
+::-webkit-scrollbar {
+    background-color: #333;
+    width: 10px;
+}
+
+::selection {
+    color: var(--green);
+    background-color: white;
+    transition: 0.5s linear;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: var(--green);
+}
+
+
+/* Scroll to top  */
+
+.scroll-top {
+    position: fixed;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: var(--green);
+    bottom: -100px;
+    right: 15px;
+    z-index: 99999;
+    border: 2px solid black;
+    transition: all 0.5s linear;
+}
+
+.scroll-top i {
+    color: #333;
+}
+
+.scroll-top:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px #2e2d2dd1;
+
+}
+
+.scroll-top:hover i {
+    color: white;
+    transition: 0.5s linear;
+}
+
+.top-on {
+
+
+    bottom: 30px;
+
+}
+
+/* End Scroll to top  */
+
+
+/* Animation  */
+
+@keyframes brands {
+    0% {
+        color: #333;
+    }
+
+    100% {
+        color: var(--green);
+    }
+}
+
+/* End Animations  */
+
+/* Start navbar  */
+
+.navbar-brand {
+    font-family: 'Smooch', cursive;
+    font-size: 35px;
+    color: var(--green);
+    animation: brands;
+        animation-timing-function: ease-in;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+}
+
+.navbar-brand:hover {
+   
+}
+
+
+
+
+.navbar-toggler, 
+.navbar-toggler:focus{
+    outline: none !important;
+    border: none !important;
+    color: white;
+    box-shadow: none;
+        
+    
+}
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+    color: var(--green);
+
+}
+
+.navbar-toggler-icon i {
+    color: var(--dark);
+    padding: 5px;
+}
+
+
+
+/* End navbar  */
+
+/* Landing  */
+
+
+.landing {
+    min-height: calc(100vh - 78.5px);
+    position: relative;
+    background-image: url(../images/landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* /Landing  */
+
+/* Features  */
+
+.features {
+    background-color: var(--dark);
+}
+
+.main-title .main-tl-btm {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 200px;
+    border-radius: 5px;
+    background-image: linear-gradient(to left  , #33d175 , white , #33d175  );
+}
+
+.features .feature {
+    min-height: 200px;
+}
+
+.features .feature::after {
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    transition: .5s linear;
+    background-color: var(--green);
+    position: absolute;
+    content: "";
+}
+
+.features .feature:hover::after  {
+    width: 100%;
+}
+
+.features .feature::before {
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+    transition: .5s linear;
+    background-color: var(--green);
+    position: absolute;
+    content: "";
+}
+
+.features .feature:hover::before {
+    width: 100%;
+}
+
+.features .feature:hover .icon , .features .feature:hover h3  {
+    color: var(--green);
+    transition: 0.5s;
+}
+
+.features .feature:hover p {
+    color: white !important;
+    transition: .5s linear;
+}
+
+
+/* /Features  */
+
+.ourwork {
+    background-color: rgb(228 226 226 / 82%);
+}
+
+.ourwork .pics {
+    background-color: #f7f7f7;
+        height: 250px;
+        width: 250px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid var(--green);
+        margin: 4px;
+        padding: 10px 10px;
+        position: relative;
+        
+}
+
+
+.ourwork .pics::after {
+    position: absolute;
+    content: attr(data-name);
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: -60px;
+    background-color: rgb(51 51 51 / 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Smooch', cursive;
+    font-size: 2rem;
+    transition: 0.5s ease-in;
+}
+
+
+.ourwork .pics:hover::after {
+    bottom: 0;
+}
+
+.ourwork .pics img{
+    height: 100%;
+    width: 250px;
+}
+
+
+.our-stuff .intro {
+    max-width: 500px;
+}
+
+.our-stuff .image {
+    animation: rot 2s linear  infinite alternate forwards;
+}
+
+@keyframes rot {
+    0% {
+transform: rotate(-5deg);
+    }
+    100% {
+transform: rotate(5deg);
+    }
+    
+}
+
+
+.team h1 {
+    color: var(--green);
+    position: relative;
+    width: fit-content;
+}
+
+.team h1::after {
+    position: absolute;
+    content: "";
+    right: -10px;
+    bottom: 0;
+    width: 30%;
+    height: 3px;
+    background-image: linear-gradient(to right , var(--green) , #333);
+    border-radius: 20px;
+}
+
+
+.team .characters {
+    background-color: var(--green);
+
+}
+
+.partner .partner-info {
+    background-color: var(--green);
+}
+
+.contact input:focus {
+   /* border-color: var(--green) !important; */
+box-shadow:  0 0 0 0.25rem var(--green-alpha) !important;
+}
+
+.subscribe {
+    background-color: var(--green);
+}
+
+.subscribe input[type="Email"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #333;
+    color: white;
+    transition: 0.4s;
+}
+.subscribe input[type="Email"]::placeholder{
+    color: white;
+}
+
+.subscribe input[type="Email"]:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+   
+}
+
+.subscribe button:hover {
+    color: var(--green) !important;
+    background-color: #333 !important;
+    transition: 0.3s;
+
+
+}
+
+.footer .facebook {
+    color: #1877f2;
+    background-color: white;
+
+}
+.footer .instagram {
+    color: #c13584;
+   
+}
+.footer .twitter {
+    color: #1da1f2;
+    
+}
+.footer .whatsapp {
+    color: #128c7e;
+}
+
+.footer .head {
+    color: var(--green);
+}
