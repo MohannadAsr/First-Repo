@@ -1,3 +1,1 @@
-# First-Repo
-My First Repo
-## Learning the Syntax in Github
+https://mohannadasr.github.io/First-Repo/
